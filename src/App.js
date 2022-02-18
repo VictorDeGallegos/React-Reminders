@@ -1,4 +1,5 @@
 import React from 'react';
+import { Titulo } from './Titulo';
 import { TodoCounter } from './TodoCounter';
 import { TodoSearch } from './TodoSearch';
 import { TodoList } from './TodoList';
@@ -9,14 +10,14 @@ import { CreateTodoButton } from './CreateTodoButton';
 const todos = [
   { text: 'Cortar cebolla', completed: true },
   { text: 'Tomar el cursso de intro a React', completed: false },
-  { text: 'SPIDERMAN', completed: false },
+  { text: 'Llorar con la llorona', completed: true },
   { text: 'LALALALAA', completed: false },
-  { text: 'HOLA MUNDO', completed: false },
 ];
 
 function App() {
   return (
     <React.Fragment>
+      <Titulo />
       <TodoCounter />
       <TodoSearch />
       <TodoList>
