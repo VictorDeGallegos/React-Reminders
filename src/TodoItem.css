@@ -1,7 +1,6 @@
 .TodoItem {
   background-color: #fafafa;
   position: relative;
-  /* aliniando  a la derecha */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +40,7 @@
   left: 12px;
 }
 .Icon-check--active {
-  color: #fa6161;
+  color: greenyellow;
 }
 
 .Icon-delete {
