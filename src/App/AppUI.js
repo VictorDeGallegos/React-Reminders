@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import { Titulo } from '../Titulo';
 import { TodoCounter } from '../TodoCounter';
 import { TodoSearch } from '../TodoSearch';
@@ -7,7 +8,7 @@ import { TodoItem } from '../TodoItem';
 import { CreateTodoButton } from '../CreateTodoButton';
 import { CreateTodoButtonEnd } from '../CreateTodoButtonEnd';
 
-function AppUI({ totalTodos, completedTodos, searchValue, setSearchValue, searchedTodos, completeTodo, deleteTodo }) {
+function AppUI({ error, loading, totalTodos, completedTodos, searchValue, setSearchValue, searchedTodos, completeTodo, deleteTodo }) {
   return (
     <React.Fragment>
       <Titulo />
@@ -15,6 +16,16 @@ function AppUI({ totalTodos, completedTodos, searchValue, setSearchValue, search
       <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
 
       <TodoList>
+        {error && <img src="https://media.giphy.com/media/hp3dmEypS0FaoyzWLR/giphy.gif" alt="Error" class="center" />}
+        {error && <p className="error">Desespérate, hubo un error...</p>}
+        {loading && <img src="https://media.giphy.com/media/Iblv3w6yvj9DTMwCsJ/giphy.gif" alt="Cargando" class="center" />}
+        {loading && <h2 className="cargando">Estamos cargando sus GOALS...</h2>}
+        {!loading && !searchedTodos.length && (
+          <img src="https://media.giphy.com/media/USUIWSteF8DJoc5Snd/giphy.gif" alt="Sin goals" class="center" />
+        )}
+        {!loading && !searchedTodos.length && (
+          <h1 className="primergoal">Parece que no hay nada por aqui... ¿Por qué no creas un nuevo GOAL? </h1>
+        )}
         {searchedTodos.map((todo) => (
           <TodoItem
             key={todo.text}

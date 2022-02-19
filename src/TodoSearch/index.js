@@ -11,7 +11,13 @@ function TodoSearch({ searchValue, setSearchValue }) {
   };
 
   return [
-    <input className="TodoSearch" placeholder="Buscar GOAL" value={searchValue} onChange={onSearchValueChange} onKeyDown={handleKeyDown} />,
+    <input
+      className="TodoSearch"
+      placeholder="Buscar GOALS"
+      value={searchValue}
+      onChange={onSearchValueChange}
+      onKeyDown={handleKeyDown}
+    />,
   ];
 }
 

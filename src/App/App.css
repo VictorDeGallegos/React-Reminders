@@ -36,3 +36,79 @@
     transform: rotate(360deg);
   }
 }
+
+.primergoal {
+  color: #fa6161;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+  padding: 48px;
+}
+.error {
+  color: #fa6161;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+  padding: 48px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 200px;
+  height: auto;
+}
+
+.cargando {
+  color: #fa6161;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+  padding: 48px;
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name: parpadeo;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
