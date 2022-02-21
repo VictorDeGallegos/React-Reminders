@@ -6,18 +6,19 @@ import { TodoCounter } from '../TodoCounter';
 import { TodoSearch } from '../TodoSearch';
 import { TodoList } from '../TodoList';
 import { TodoItem } from '../TodoItem';
+import { TodoForm } from '../TodoForm';
 import { CreateTodoButton } from '../CreateTodoButton';
 import { CreateTodoButtonEnd } from '../CreateTodoButtonEnd';
+import { Modal } from '../Modal';
 
 function AppUI() {
-  const { error, loading, searchedTodos, completeTodo, deleteTodo } = React.useContext(TodoContext);
+  const { error, loading, searchedTodos, completeTodo, deleteTodo, openModal, setOpenModal } = React.useContext(TodoContext);
 
   return (
     <React.Fragment>
       <Titulo />
       <TodoCounter />
       <TodoSearch />
-
       <TodoList>
         {error && <img src="https://media.giphy.com/media/hp3dmEypS0FaoyzWLR/giphy.gif" alt="Error" class="center" />}
         {error && <p className="error">Desespérate, hubo un error...</p>}
@@ -39,8 +40,12 @@ function AppUI() {
           />
         ))}
       </TodoList>
-
-      <CreateTodoButton />
+      {!!openModal && (
+        <Modal>
+          <TodoForm />
+        </Modal>
+      )}
+      <CreateTodoButton setOpenModal={setOpenModal} />
       <CreateTodoButtonEnd />
     </React.Fragment>
   );
