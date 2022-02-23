@@ -8,7 +8,7 @@ import { TodoList } from '../TodoList';
 import { TodoItem } from '../TodoItem';
 import { TodoForm } from '../TodoForm';
 import { CreateTodoButton } from '../CreateTodoButton';
-import { CreateTodoButtonEnd } from '../CreateTodoButtonEnd';
+// import { CreateTodoButtonEnd } from '../CreateTodoButtonEnd';
 import { Modal } from '../Modal';
 
 function AppUI() {
@@ -46,7 +46,7 @@ function AppUI() {
         </Modal>
       )}
       <CreateTodoButton setOpenModal={setOpenModal} />
-      <CreateTodoButtonEnd />
+      {/* <CreateTodoButtonEnd /> */}
     </React.Fragment>
   );
 }

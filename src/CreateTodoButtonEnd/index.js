@@ -7,8 +7,11 @@ function CreateTodoButtonEnd(props) {
   };
 
   return (
-    <button className="CreateTodoButtonEnd" onClick={() => onClickButton('Aquí se debería Esconder los GOALS terminados')}>
-      👁
+    <button
+      className="CreateTodoButtonEnd"
+      onClick={() => onClickButton('Desarrollado por Victor Gallegos © 2022 copyright all right reserved')}
+    >
+      ℹ️
     </button>
   );
 }
