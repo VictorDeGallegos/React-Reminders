@@ -1,3 +1,10 @@
+# GOALS ❤️
+App para llevar una lista de todas esas metas que estes por cumplir con tu novi@ o amig@.
+
+![IMG_3192](https://user-images.githubusercontent.com/41756950/155450801-e8c1ceb1-f540-443b-b216-185765748ce9.PNG)
+
+![IMG_3191](https://user-images.githubusercontent.com/41756950/155450877-8c4176af-5dd9-491f-b362-8e2ccdee0a7a.PNG)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
