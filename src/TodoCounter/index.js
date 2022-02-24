@@ -10,7 +10,7 @@ function TodoCounter() {
       : (document.title = `GOALS`);
   }, [totalTodos, completedTodos]);
   return (
-    <h2 className="TodoCounter">
+    <h2 className="TodoCounter ">
       {(completedTodos === 0) & (totalTodos === 0)
         ? 'No  tienen GOALS pendientes'
         : totalTodos === completedTodos

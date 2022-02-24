@@ -10,6 +10,7 @@ import { TodoForm } from '../TodoForm';
 import { CreateTodoButton } from '../CreateTodoButton';
 // import { CreateTodoButtonEnd } from '../CreateTodoButtonEnd';
 import { Modal } from '../Modal';
+import { Footer } from '../Footer/Footer';
 
 function AppUI() {
   const { error, loading, searchedTodos, completeTodo, deleteTodo, openModal, setOpenModal } = React.useContext(TodoContext);
@@ -47,6 +48,7 @@ function AppUI() {
       )}
       <CreateTodoButton setOpenModal={setOpenModal} />
       {/* <CreateTodoButtonEnd /> */}
+      <Footer />
     </React.Fragment>
   );
 }

@@ -1,8 +1,12 @@
 import React from 'react';
 import './Titulo.css';
 
-function Titulo() {
-  return [<h2 className="Titulo">GOALS ❤️</h2>];
+function Titulo({ children, loading }) {
+  return (
+    <header className=" app-header">
+      <h1 className="Titulo">GOALS ❤️</h1>
+      {React.Children.toArray(children).map((child) => React.cloneElement(child, { loading }))}
+    </header>
+  );
 }
-
 export { Titulo };
